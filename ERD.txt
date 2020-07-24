@@ -1,0 +1,28 @@
+card_holder
+-
+card_holder_id PK
+card_holder_name 
+
+credit_card
+-
+card_number PK
+card_holder_id FK - card_holder.card_holder_id
+
+merchant
+-
+merchant_id PK
+merchant_name
+merchant_category_id FK - merchant_category.merchant_category_id
+
+merchant_category
+-
+merchant_category_id PK 
+category_name 
+
+transaction
+-
+transaction_id PK
+transaction_date         
+amount
+card_number FK - credit_card.card_number
+merchant_id FK - merchant.merchant_id
